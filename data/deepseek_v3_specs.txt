@@ -1,0 +1,19 @@
+DeepSeek-V3 Technical Report
+Date: December 2024
+Developer: DeepSeek-AI
+
+Abstract:
+We present DeepSeek-V3, a strong Mixture-of-Experts (MoE) language model with 671 billion total parameters, of which 37 billion are activated for each token. DeepSeek-V3 achieves performance comparable to leading closed-source models like GPT-4o and Claude 3.5 Sonnet.
+
+Key Architecture Features:
+1. Multi-Head Latent Attention (MLA): DeepSeek-V3 utilizes MLA to improve inference efficiency by compressing the Key-Value (KV) cache, significantly reducing memory bandwidth usage during generation.
+2. DeepSeekMoE: A specialized Mixture-of-Experts architecture that uses fine-grained expert segmentation and shared expert isolation. This allows for higher expert specialization and knowledge sharing.
+3. Auxiliary-Loss-Free Load Balancing: Unlike traditional MoE models that use auxiliary losses to ensure expert load balancing (often hurting performance), DeepSeek-V3 employs a novel load balancing strategy without auxiliary loss, maximizing model performance.
+
+Training Details:
+- The model was pre-trained on 14.8 trillion tokens.
+- Training was conducted on a cluster of 2,048 NVIDIA H800 GPUs.
+- The training process utilized FP8 mixed-precision training for stability and efficiency.
+
+Performance:
+DeepSeek-V3 outperforms Llama 3.1 405B on standard coding benchmarks (HumanEval, LiveCodeBench) and math benchmarks (MATH-500), despite having significantly fewer active parameters (37B vs 405B).

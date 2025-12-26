@@ -1,0 +1,26 @@
+# --- OPTIMIZATION 1: CPU-Only PyTorch ---
+# This points pip to the CPU-specific wheel repository.
+# It prevents downloading 2GB+ of unused NVIDIA CUDA drivers.
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Explicitly install lightweight torch first
+torch
+torchvision
+torchaudio
+
+# --- CORE RAG STACK ---
+sentence-transformers
+chromadb
+huggingface_hub
+
+# --- INFERENCE ENGINE ---
+# This runs the Quantized Llama 3.2 Model
+llama-cpp-python
+
+# --- PDF Processing ---
+PyPDF2
+
+# --- NOTEBOOK & UI ---
+jupyter
+notebook
+ipywidgets
