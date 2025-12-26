@@ -27,7 +27,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY src/ ./src/
 COPY data/ ./data/
 COPY notebooks/ ./notebooks/
-COPY download_model.py .
 
 # Create directories
 RUN mkdir -p models chroma_db
