@@ -2,7 +2,6 @@
 
 ![Python 3.11](https://img.shields.io/badge/Python-3.11-blue?logo=python)
 ![Llama 3.2](https://img.shields.io/badge/Model-Llama_3.2_1B-meta?logo=meta)
-![Status](https://img.shields.io/badge/Status-POC_Ready-success)
 ![Docker](https://img.shields.io/badge/Deployment-Docker_Ready-blue?logo=docker)
 
 ## 📋 Executive Summary
