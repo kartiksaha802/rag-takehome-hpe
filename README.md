@@ -46,8 +46,8 @@ The system is architected to balance **simplicity** (for rapid prototyping) with
 
 1.  **Clone the Repository**
     ```bash
-    git clone [https://github.com/your-username/minimal-rag-local.git](https://github.com/your-username/minimal-rag-local.git)
-    cd minimal-rag-local
+    git clone https://github.com/kartiksaha802/rag-takehome-hpe.git
+    cd rag-takehome-hpe
     ```
 
 2.  **Create a Virtual Environment**
@@ -81,40 +81,3 @@ This project is cloud-native ready. While the notebook is designed for interacti
 ```bash
 docker build -t minimal-rag-demo .
 
-graph TD
-    %% Styling
-    classDef hardware fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
-    classDef logic fill:#fff3e0,stroke:#ff6f00,stroke-width:2px;
-    classDef storage fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
-
-    subgraph "HPE Private Cloud AI (Simulated Edge Node)"
-        direction TB
-        
-        User([👤 Customer Engineer]) -->|1. Query| UI[Jupyter Notebook Interface]
-        
-        subgraph "Application Layer (src/rag_engine.py)"
-            UI -->|2. Send Query| Orch{RAG Orchestrator}
-            
-            subgraph "Ingestion Pipeline"
-                Doc[📄 PDF/Text Docs] -->|Chunking| Chunks[Text Chunks]
-                Chunks -->|Encode| Embed[Embedder Model<br/>(MiniLM-L6-v2)]
-            end
-            
-            subgraph "Retrieval System"
-                Embed -->|3. Vector Search| VDB[(ChromaDB<br/>Persistent Store)]
-                VDB -->|4. Return Top-k Chunks| Orch
-            end
-            
-            subgraph "Generation System"
-                Orch -->|5. Context + Prompt| LLM[🤖 Inference Engine<br/>Llama-3.2-1B (Int4)]
-                LLM -->|6. Generated Answer| Orch
-            end
-        end
-        
-        Orch -->|7. Final Response| UI
-    end
-
-    %% Apply Styles
-    class UI,Orch logic;
-    class VDB,Doc hardware;
-    class LLM storage;
