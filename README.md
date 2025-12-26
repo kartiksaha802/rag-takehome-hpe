@@ -67,7 +67,7 @@ The system is architected to balance **simplicity** (for rapid prototyping) with
 4.  **Run the Demo**
     Launch the Jupyter Notebook to explore the solution interactively.
     ```bash
-    jupyter notebook notebooks/demo_presentation.ipynb
+    jupyter notebook notebooks/demo.ipynb
     ```
     *Note: The first time you run the notebook, it will automatically download the Llama 3.2 model (~800MB).*
 
