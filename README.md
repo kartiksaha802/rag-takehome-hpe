@@ -8,7 +8,7 @@
 ## 📋 Executive Summary
 This repository contains a reference implementation of a **Retrieval-Augmented Generation (RAG)** system optimized for resource-constrained edge environments (Local CPU).
 
-Designed as a "Starter Kit" for enterprise AI adoption, it demonstrates how to achieve low-latency semantic search (<50ms) and generation (~30 tokens/s) without requiring expensive GPU infrastructure. The solution is container-ready and structured to facilitate migration to scalable platforms like **Kubernetes** or **HPE Private Cloud AI**.
+Designed as a "Starter Kit" for enterprise AI adoption, it demonstrates how to achieve low-latency semantic search (<50ms) and generation (~30 tokens/s) without requiring expensive GPU infrastructure. The solution is container-ready.
 
 ---
 
