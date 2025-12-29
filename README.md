@@ -76,6 +76,9 @@ The system is architected to balance **simplicity** (for rapid prototyping) with
 
 This project is cloud-native ready. While the notebook is designed for interactive exploration, the environment can be packaged for deployment.
 
+**Prerequisites:**
+* **Docker Desktop** installed and running ([Download here](https://www.docker.com/products/docker-desktop/))
+
 **Build the Image:**
 ```bash
 docker build -t minimal-rag-demo .
