@@ -79,4 +79,20 @@ This project is cloud-native ready. While the notebook is designed for interacti
 **Build the Image:**
 ```bash
 docker build -t minimal-rag-demo .
+```
+
+**Run the Container:**
+```bash
+docker run -p 8888:8888 minimal-rag-demo
+```
+
+**Access the Demo:**
+1. Open http://localhost:8888 in your browser
+2. Navigate to `notebooks/demo.ipynb`
+3. Run the RAG demo
+
+**Stop the Container:**
+Press `Ctrl+C` in the terminal
+
+---
 
